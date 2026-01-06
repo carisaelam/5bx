@@ -10,4 +10,5 @@ export const useAppStore = defineStore('app', {
       this.visits++;
     },
   },
+  persist: true,
 });
