@@ -1,14 +1,15 @@
+<script setup lang="ts"></script>
+
 <template>
   <main class="wrap">
-    <h1>My Vue App</h1>
-    <p>Deployed with Netlify ✅</p>
-    <p class="muted">Updated: {{ today }}</p>
+    <header class="nav">
+      <RouterLink to="/">Home</RouterLink>
+      <RouterLink to="/about">About</RouterLink>
+    </header>
+
+    <RouterView />
   </main>
 </template>
-
-<script setup lang="ts">
-const today = new Date().toLocaleDateString();
-</script>
 
 <style scoped>
 .wrap {
@@ -24,7 +25,9 @@ const today = new Date().toLocaleDateString();
     Arial,
     sans-serif;
 }
-.muted {
-  opacity: 0.7;
+.nav {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
 }
 </style>
