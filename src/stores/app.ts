@@ -9,6 +9,9 @@ export const useAppStore = defineStore('app', {
     increment() {
       this.visits++;
     },
+    reset() {
+      this.visits = 0;
+    },
   },
   persist: true,
 });
